@@ -49,16 +49,6 @@ $(function () {
     autoplay: {
       delay: 2000,
     },
-    breakpoints: {
-      0: {
-        slidesPerView: 1.5,
-        slidesPerGroup: 1,
-      },
-      768: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-      },
-    },
   });
 
   var swiper2 = new Swiper(".brandsSwiper", {
