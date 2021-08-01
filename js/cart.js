@@ -106,7 +106,7 @@ $(function () {
         slidesPerView: 1,
         slidesPerGroup: 1,
       },
-      767: {
+      768: {
         slidesPerView: 2.5,
         slidesPerGroup: 1,
       },
