@@ -4,7 +4,7 @@
   list-style: none;
   text-decoration: none;
   outline-style: none;
-  font-family: "FuturaPT-Medium";
+  font-family: "FuturaPT-Book";
 }
 
 @font-face {
@@ -138,6 +138,7 @@
 .header .swiper-slide img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .header .swiper-pagination-bullet-active {
@@ -450,7 +451,7 @@
 
 .header .nav .menu .menu_ul li a {
   font-size: 18px;
-  font-family: "FuturaPT-Medium";
+  font-family: "FuturaPT-Book";
   color: black;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -1164,6 +1165,37 @@ section.promotions .prom_text {
   color: black;
 }
 
+.added_info {
+  position: absolute;
+  border-radius: 10px;
+  padding: 16px 20px 25px 21px;
+  background: #373535;
+  top: 25px;
+  left: -195px;
+}
+.added_info .text {
+  font-size: 16px;
+  color: rgb(254, 254, 254);
+}
+
+.good_info_hover {
+  border-radius: 10px;
+  background-color: rgb(55, 53, 53);
+  padding: 14px 19px 21px 22px;
+  max-width: 310px;
+  position: absolute;
+  right: 0;
+  left: 95px;
+  top: 130px;
+  display: none;
+}
+
+.good_info_hover .text {
+  font-family: "FuturaPT-Light";
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
 .rollPop .good_pop_item,
 .setPop .good_pop_item {
   display: -webkit-box;
@@ -1175,6 +1207,7 @@ section.promotions .prom_text {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
 .rollPop .info,
@@ -2094,8 +2127,36 @@ section.cart .third .text {
     height: 200px;
   }
 
+  .good_item,
+  .brand_item {
+    display: flex;
+  }
+  .good_item .img_block,
+  .brand_item .img_block {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    width: 170px;
+  }
+
+  .good_price{
+    margin-bottom: 10px;
+  }
+
+  .headerSwiper {
+    padding-top: 50px !important;
+  }
+
   .header .swiper-slide {
     border-radius: 0;
+  }
+
+  .added_info{
+    left: -155px;
+  }
+
+  .good_info_block{
+    width: 80%;
   }
 
   .del_info_pop {
@@ -2110,6 +2171,19 @@ section.cart .third .text {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .added_info .text {
+    font-size: 12px;
+  }
+
+  .good_info_hover {
+    max-width: 100%;
+    left: 0;
+  }
+
+  .good_info_hover .text {
+    font-size: 12px;
   }
 
   .del_info_pop .middle_text {
@@ -2215,7 +2289,7 @@ section.cart .third .text {
   }
 
   .good_title {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .good_desc {
@@ -2227,7 +2301,9 @@ section.cart .third .text {
   }
 
   .panel {
-    margin-top: 30px;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   section.brands {
@@ -2239,7 +2315,9 @@ section.cart .third .text {
   }
 
   section.brands .panel {
-    margin-top: 20px;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   section.sets,
@@ -2652,4 +2730,66 @@ section.cart .third .text {
   .header .nav .top .lines.fixed {
     top: 5px;
   }
+}
+
+.big_circle svg.shake {
+  -webkit-animation: shake 0.5s ease infinite;
+  animation: shake 0.5s ease infinite;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(-3deg) scale(1.2);
+    transform: rotate(-3deg) scale(1.2);
+  }
+  20% {
+    -webkit-transform: rotate(20deg) scale(1.2);
+    transform: rotate(20deg) scale(1.2);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg) scale(1.2);
+    transform: rotate(-20deg) scale(1.2);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) scale(1.2);
+    transform: rotate(5deg) scale(1.2);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg) scale(1.1);
+    transform: rotate(-5deg) scale(1.1);
+  }
+  to {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(-3deg) scale(1.2);
+    transform: rotate(-3deg) scale(1.2);
+  }
+  20% {
+    -webkit-transform: rotate(20deg) scale(1.2);
+    transform: rotate(20deg) scale(1.2);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg) scale(1.2);
+    transform: rotate(-20deg) scale(1.2);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) scale(1.2);
+    transform: rotate(5deg) scale(1.2);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg) scale(1.1);
+    transform: rotate(-5deg) scale(1.1);
+  }
+  to {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+  }
+}
+
+.fancybox-slide--html {
+  padding: 0 !important;
 }
