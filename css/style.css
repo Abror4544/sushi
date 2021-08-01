@@ -421,6 +421,7 @@
 
 .header .nav .menu {
   padding: 33px 0 44px 0;
+  transition: .5s;
 }
 
 .header .nav .menu.fixed {
