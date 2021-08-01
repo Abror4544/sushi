@@ -57,7 +57,7 @@ $(function () {
       768: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-      }
+      },
     },
   });
 
@@ -105,11 +105,16 @@ $(function () {
     });
   });
 
-  $(".good_pop_item .button_good").click(function(){
-    $(".fancybox-container").hide();
-  })
+  $(".good_pop_item .button_good").click(function () {
+    $.fancybox.close({
+      href: "javascript:;",
+      src: "#set_pop",
+    });
+  });
 
-  let btns = document.querySelectorAll(".good_item .button_good, .brand_item .button_good, .good_pop_item .button_good");
+  let btns = document.querySelectorAll(
+    ".good_item .button_good, .brand_item .button_good, .good_pop_item .button_good"
+  );
   let added = 0;
   let cart_icon = document.querySelector(".cart-icon_block");
   let quantity = document.querySelector(".good_quantity");
@@ -122,13 +127,11 @@ $(function () {
       $(".big_circle svg").addClass("shake");
       $(".added_info").fadeIn();
       setTimeout(() => {
-        $(".big_circle svg").removeClass("shake");          
+        $(".big_circle svg").removeClass("shake");
       }, 400);
-      setTimeout(() => {       
-        $(".added_info").fadeOut(500);        
+      setTimeout(() => {
+        $(".added_info").fadeOut(500);
       }, 2000);
-
     });
   }
-
 });
