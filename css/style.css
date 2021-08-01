@@ -1184,8 +1184,8 @@ section.promotions .prom_text {
   padding: 14px 19px 21px 22px;
   max-width: 310px;
   position: absolute;
-  right: 95px;
-  top: 100px;
+  right: -37px;
+  top: 147px;
   display: none;
 }
 
@@ -1194,6 +1194,7 @@ section.promotions .prom_text {
   font-size: 16px;
   color: rgb(255, 255, 255);
 }
+
 
 .rollPop .good_pop_item,
 .setPop .good_pop_item {
@@ -1230,7 +1231,11 @@ section.promotions .prom_text {
   font-size: 20px;
   font-family: "FuturaPT-Medium";
   color: black;
-  margin-bottom: 20px;
+}
+
+.setPop .button_good,
+.rollPop .button_good {
+  margin-top: 20px;
 }
 
 .delpay {
@@ -2138,7 +2143,7 @@ section.cart .third .text {
     width: 170px;
   }
 
-  .good_price{
+  .good_price {
     margin-bottom: 10px;
   }
 
@@ -2150,11 +2155,11 @@ section.cart .third .text {
     border-radius: 0;
   }
 
-  .added_info{
+  .added_info {
     left: -155px;
   }
 
-  .good_info_block{
+  .good_info_block {
     width: 80%;
   }
 
