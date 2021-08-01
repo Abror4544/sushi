@@ -26,6 +26,13 @@ $(function () {
     $(".del_info_pop").fadeOut(200);
   });
 
+  $(".good_pop_item .img_block").mouseenter(function () {
+    $(".good_info_hover").fadeIn(200);
+  });
+  $(".good_pop_item .img_block").mouseleave(function () {
+    $(".good_info_hover").fadeOut(200);
+  });
+
   $(window).scroll(function () {
     let offset = $(window).scrollTop();
     $(".menu").toggleClass("fixed", offset > 100);
@@ -42,6 +49,20 @@ $(function () {
     autoplay: {
       delay: 2000,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.5,
+        slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 2.5,
+        slidesPerGroup: 1,
+      },
+      1200: {
+        slidesPerView: 3.5,
+        slidesPerGroup: 1,
+      },
+    },
   });
 
   var swiper2 = new Swiper(".brandsSwiper", {
@@ -51,7 +72,7 @@ $(function () {
         slidesPerView: 1,
         slidesPerGroup: 1,
       },
-      767: {
+      768: {
         slidesPerView: 2.5,
         slidesPerGroup: 1,
       },
@@ -88,7 +109,11 @@ $(function () {
     });
   });
 
-  let btns = document.querySelectorAll(".good_item .button_good, .brand_item .button_good");
+  $(".good_pop_item .button_good").click(function(){
+    $(".fancybox-container").hide();
+  })
+
+  let btns = document.querySelectorAll(".good_item .button_good, .brand_item .button_good, .good_pop_item .button_good");
   let added = 0;
   let cart_icon = document.querySelector(".cart-icon_block");
   let quantity = document.querySelector(".good_quantity");
@@ -98,6 +123,15 @@ $(function () {
       $(cart_icon).fadeIn(500);
       added++;
       quantity.innerHTML = added;
+      $(".big_circle svg").addClass("shake");
+      $(".added_info").fadeIn();
+      setTimeout(() => {
+        $(".big_circle svg").removeClass("shake");          
+      }, 400);
+      setTimeout(() => {       
+        $(".added_info").fadeOut(500);        
+      }, 2000);
+
     });
   }
 
