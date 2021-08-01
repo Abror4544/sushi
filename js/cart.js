@@ -83,12 +83,11 @@ $(function () {
     $(".del_info_pop").fadeOut(200);
   });
 
-  $(".good_pop_item .img_block").mouseenter(function () {
-    $(".good_info_hover").fadeIn(200);
+  $(".good_pop_item .good_info").mouseover(function () {
+    $(".good_info_hover").fadeIn(0);
   });
-
-  $(".good_pop_item .img_block").mouseleave(function () {
-    $(".good_info_hover").fadeOut(200);
+  $(".good_pop_item .good_info").mouseout(function () {
+    $(".good_info_hover").fadeOut(0);
   });
 
   $(".good_pop_item .button_good").click(function () {
