@@ -1184,9 +1184,8 @@ section.promotions .prom_text {
   padding: 14px 19px 21px 22px;
   max-width: 310px;
   position: absolute;
-  right: 0;
-  left: 95px;
-  top: 130px;
+  right: 95px;
+  top: 100px;
   display: none;
 }
 
