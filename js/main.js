@@ -55,13 +55,9 @@ $(function () {
         slidesPerGroup: 1,
       },
       768: {
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         slidesPerGroup: 1,
-      },
-      1200: {
-        slidesPerView: 3.5,
-        slidesPerGroup: 1,
-      },
+      }
     },
   });
 
